@@ -2,7 +2,7 @@ import { AsyncStorage } from 'react-native';
 import { Facebook } from 'expo';
 
 import {
- FACEBOOK_LOGIN_SUCESS,
+ FACEBOOK_LOGIN_SUCCESS,
  FACEBOOK_LOGIN_FAIL
 } from './types';
 
@@ -11,7 +11,7 @@ export const facebookLogin = () => async dispatch => {
 
   if (token) {
     // Dispatch an action saying FB login is done
-    dispatch({ type: FACEBOOK_LOGIN_SUCESS, payload: token });
+    dispatch({ type: FACEBOOK_LOGIN_SUCCESS, payload: token });
   } else {
     // Start FB login process
     doFacebookLogin(dispatch);
@@ -28,5 +28,5 @@ export const facebookLogin = () => async dispatch => {
     }
 
     await AsyncStorage.setItem('fb_token', token);
-    dispatch({ type: FACEBOOK_LOGIN_SUCESS, payload: token });
+    dispatch({ type: FACEBOOK_LOGIN_SUCCESS, payload: token });
   };
