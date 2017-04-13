@@ -1,6 +1,6 @@
 import Expo from 'expo';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
 
@@ -9,7 +9,7 @@ import AuthScreen from './screens/AuthScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import MapScreen from './screens/MapScreen';
 import DeckScreen from './screens/DeckScreen';
-import SettingScreen from './screens/SettingScreen';
+import LogoutScreen from './screens/LogoutScreen';
 import ReviewScreen from './screens/ReviewScreen';
 
 class App extends React.Component {
@@ -21,17 +21,20 @@ class App extends React.Component {
         screen: TabNavigator({
           map: { screen: MapScreen },
           deck: { screen: DeckScreen },
-          review: {
-            screen: StackNavigator({
-              review: { screen: ReviewScreen },
-              settings: { screen: SettingScreen }
-            })
-          }
+          logout: { screen: LogoutScreen }
+          // review: {
+          //   screen: StackNavigator({
+          //     review: { screen: ReviewScreen },
+          //     settings: { screen: SettingScreen }
+          //   })
+          // }
         })
       }
     }, {
       navigationOptions: {
-        tabBar: { visible: false }
+        tabBar: {
+          visible: false
+         }
       },
       lazyLoad: true
     });
@@ -39,7 +42,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <View style={styles.container}>
-          <MainNavigator />
+          <MainNavigator style={{ backgroundColor: '#455A64'}} />
         </View>
     </Provider>
     );

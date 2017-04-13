@@ -49,9 +49,10 @@ class MapScreen extends Component {
           <View style={styles.buttonContainer}>
             <Button
               large
-              title="Search This Area"
-              backgroundColor="#009688"
-              icon={{ name: 'search' }}
+              raised
+              title="Discover"
+              backgroundColor="#00BCD4"
+              icon={{ name: 'my-location' }}
               onPress={this.onButtonPress}
             />
           </View>

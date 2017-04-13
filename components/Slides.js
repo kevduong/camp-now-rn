@@ -6,12 +6,46 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Slides extends Component {
 
+  renderFirstSlide(index) {
+    if (index === 0) {
+      return (
+        <View>
+          <Image
+            source={require('../assets/img/camp-now-logo.png')}
+            style={{
+              marginTop: 50
+            }}
+              />
+          </View>
+      );
+    }
+  }
+
+  renderSecondSlide(index) {
+    if (index === 1) {
+      return (
+        <View>
+          <Image
+            source={require('../assets/img/mockup.png')}
+            style={{
+              marginTop: 50,
+              width: 150,
+              height: 300
+            }}
+              />
+          </View>
+      );
+    }
+  }
+
   renderLastSlide(index) {
     if (index === this.props.data.length - 1) {
       return (
+
         <Button
-          title="Explore!"
+          title="Explore"
           raised
+          icon={{ name: 'terrain'}}
           buttonStyle={styles.buttonStyle}
           onPress={this.props.onComplete}
           />
@@ -22,14 +56,13 @@ class Slides extends Component {
     return this.props.data.map((slide, index) => {
       return (
         <View
-          key={[slide.text, slide.image]}
+          key={[slide.text, slide.img]}
           style={[styles.slideStyle,{backgroundColor: slide.color}]}>
             <Text style={styles.slideText}> {slide.text} </Text>
-            {/* {this.renderFirstSlide(index)} */}
+            {this.renderFirstSlide(index)}
+            {this.renderSecondSlide(index)}
             {this.renderLastSlide(index)}
       </View>
-
-
       );
     });
   }
@@ -64,7 +97,7 @@ const styles = {
   },
   buttonStyle: {
     backgroundColor: '#00BCD4',
-    marginTop: 15
+    marginTop: 50
   }
 };
 

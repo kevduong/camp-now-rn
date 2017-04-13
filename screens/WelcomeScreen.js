@@ -6,13 +6,13 @@ import Slides from '../components/Slides';
 
 const SLIDE_DATA = [
   {
-    text: 'Welcome to Camp Now',
+    text: '',
     color: '#607D8B'
   },
   { text: 'Explore Your Neighborhood. Discover The World.',
     color: '#455A64'
   },
-  { text: 'Swipe to find the your next camping destination.',
+  { text: 'Swipe to find the your next destination.',
     color: '#607D8B'
   }
 ];

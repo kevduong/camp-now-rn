@@ -3,7 +3,7 @@ import {
 } from '../actions/types';
 
 const INITIAL_STATE = {
-  recdata: []
+  RECDATA: []
 };
 
 export default function(state = INITIAL_STATE, action) {
