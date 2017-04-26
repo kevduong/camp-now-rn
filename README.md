@@ -8,7 +8,7 @@ Find all the great campsites, RV parks, Lodging, and recreational parks the worl
 
 For my final project at UCLA, I developed an iOS and Android application that is built using React Native and Redux.  
 
-Camp Now was inspired by my first web application with Bryce Richards with slight variations. 
+Camp Now was inspired by my [first web application](https://github.com/kevduong/camp-now) with Bryce Richards with slight variations. 
 
 Users are authenticated by using Facebook’s OAuth.  The user’s token is captured and stored asynchronously in the reducer. 
 Screen components help organize the individual pages on the app and the flow of the user experience. 
