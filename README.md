@@ -4,7 +4,7 @@ Explore Your Neighborhood. Discover The World.
 
 Find all the great campsites, RV parks, Lodging, and recreational parks the world has to offer.
 
-![campnow-open](https://cloud.githubusercontent.com/assets/19538076/26019859/a4f9bd24-372d-11e7-9a56-0dc781d21158.gif)
+![campnow-open](https://cloud.githubusercontent.com/assets/19538076/26019859/a4f9bd24-372d-11e7-9a56-0dc781d21158.gif)<br>
 ![may-12-2017 16-12-18](https://cloud.githubusercontent.com/assets/19538076/26019879/d85a2a46-372d-11e7-8d86-0984a791f400.gif)
 
 ## Context
